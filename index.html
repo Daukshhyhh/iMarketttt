@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iMarket | Премиальные iPhone, трейд-ин и сервис нового уровня</title>
+    <meta
+      id="meta-description"
+      name="description"
+      content="iMarket: премиальный магазин iPhone и аксессуаров в Уральске, Атырау и Астане. Оригинальная техника, выгодные цены, трейд-ин, подарки и быстрая консультация в WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="city-modal" id="city-modal" aria-hidden="true">
+      <div class="city-modal-card">
+        <p class="eyebrow" id="city-modal-eyebrow">Выбор города</p>
+        <h2 id="city-modal-title">Выберите ваш филиал iMarket</h2>
+        <p class="city-modal-text" id="city-modal-text">
+          Покажем нужные контакты, актуальные CTA, Instagram и маршрут до магазина в Уральске, Атырау
+          или Астане.
+        </p>
+        <div class="city-modal-actions">
+          <button class="city-choice" data-city="Уральск" type="button">Уральск</button>
+          <button class="city-choice" data-city="Атырау" type="button">Атырау</button>
+          <button class="city-choice" data-city="Астана" type="button">Астана</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-noise"></div>
+    <div class="page-glow page-glow-left"></div>
+    <div class="page-glow page-glow-right"></div>
+
+    <div class="site-shell">
+      <div class="announcement-bar">
+        <span id="announcement-text">Премиальный магазин с оригинальными iPhone, трейд-ином и сервисом, о котором пишут в отзывах</span>
+        <button class="city-switch" id="city-switch" type="button">
+          <span id="city-switch-label">Филиал:</span> <span id="selected-city-label">Уральск</span>
+        </button>
+      </div>
+
+      <header class="topbar">
+        <a class="brand" href="#hero" aria-label="iMarket home">
+          <img src="logo-imarket.svg" alt="iMarket" />
+        </a>
+
+        <nav class="nav">
+          <a href="#catalog">Каталог</a>
+          <a href="#tradein">Трейд-ин</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#stores">Филиалы</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#contact">Контакты</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <div class="lang-switch" aria-label="Language switcher">
+            <button class="lang-button is-active" id="lang-ru" data-lang="ru" type="button">RU</button>
+            <button class="lang-button" id="lang-kz" data-lang="kz" type="button">KZ</button>
+          </div>
+          <a class="button button-secondary" id="header-instagram" href="#" target="_blank" rel="noreferrer">Instagram</a>
+          <a class="button button-primary" id="header-whatsapp" href="#" target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Премиальный магазин техники</p>
+            <h1>
+              iMarket
+              <span>iPhone по выгодной цене.</span>
+            </h1>
+            <p class="hero-text">
+              Оригинальные iPhone, выгодные цены, трейд-ин и быстрая консультация.
+              Сейчас работаем для клиентов из <span id="hero-city">Уральска</span> и по всему Казахстану.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary button-large" id="hero-whatsapp" href="#" target="_blank" rel="noreferrer">
+                Получить консультацию
+              </a>
+              <a class="button button-ghost button-large" id="hero-catalog-link" href="#catalog">Смотреть каталог</a>
+            </div>
+
+            <div class="hero-simple-meta">
+              <article class="hero-simple-card">
+                <span class="hero-simple-label">Филиал</span>
+                <strong id="hero-panel-city-secondary">Уральск</strong>
+                <p id="hero-panel-address">Abai 88, Oral, Kazakhstan</p>
+              </article>
+              <article class="hero-simple-card">
+                <span class="hero-simple-label">Почему выбирают iMarket</span>
+                <strong>Оригинальная техника и быстрый сервис</strong>
+                <p>Подберём модель, ответим на вопросы и поможем с настройкой.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="brand-manifesto" aria-label="Baga Jane Sapa">
+          <div class="brand-manifesto-card">
+            <div class="brand-manifesto-marks" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+            <p class="brand-manifesto-title">BAĞA JÄNE SAPA</p>
+            <p class="brand-manifesto-text">Лучшее сочетание цены и качества для вашего нового iPhone.</p>
+          </div>
+        </section>
+
+        <section class="section experience-section" id="experience">
+          <div class="section-heading narrow">
+            <p class="eyebrow">Почему iMarket</p>
+            <h2>Удобно выбрать, быстро купить и спокойно быть уверенным в покупке.</h2>
+          </div>
+
+          <div class="experience-grid">
+            <article class="experience-card accent">
+              <span class="metric-value">Широкий выбор iPhone</span>
+              <p>Популярные модели, разные объёмы памяти и помощь с выбором под ваш бюджет.</p>
+            </article>
+            <article class="experience-card">
+              <span class="metric-value">Трейд-ин и консультация</span>
+              <p>Можно быстро оценить свой телефон и сразу связаться с нужным филиалом.</p>
+            </article>
+            <article class="experience-card">
+              <span class="metric-value">Удобно купить</span>
+              <p>Каталог, контакты, адреса филиалов и WhatsApp собраны в одном месте.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section catalog-section" id="catalog">
+          <div class="section-heading">
+            <p class="eyebrow">Каталог</p>
+            <h2>Выберите свой iPhone.</h2>
+          </div>
+
+          <div class="catalog-spotlight">
+            <div>
+              <p class="catalog-spotlight-label">Быстрый выбор</p>
+              <h3>Популярные модели с актуальными ценами и быстрым переходом в WhatsApp.</h3>
+            </div>
+            <a class="button button-secondary" href="#contact">Уточнить весь ассортимент</a>
+          </div>
+
+          <div class="catalog-grid">
+            <article class="catalog-card featured">
+              <div class="catalog-topline">
+                <span class="catalog-badge">Флагманский выбор</span>
+                <span>Новая вершина</span>
+              </div>
+              <h3>iPhone 17 Pro Max</h3>
+              <p>Для тех, кто хочет максимум статуса, камеры, автономности и ощущения “лучшего из лучшего”.</p>
+              <ul class="catalog-points">
+                <li>Флагманская линейка</li>
+                <li>Для контент-мейкеров и тех, кто любит топ</li>
+                <li>Идеально сочетается с апгрейдом по трейд-ину</li>
+              </ul>
+              <p class="catalog-price">от 859 000 ₸</p>
+              <a class="button button-primary product-link" data-product="iPhone 17 Pro Max" href="#" target="_blank" rel="noreferrer">Узнать наличие</a>
+            </article>
+
+            <article class="catalog-card">
+              <div class="catalog-topline">
+                <span class="catalog-badge">Выбор Pro</span>
+                <span>Баланс мощи</span>
+              </div>
+              <h3>iPhone 16 Pro</h3>
+              <p>Премиальный выбор для тех, кто хочет новое поколение, сильную камеру и солидный запас мощности.</p>
+              <p class="catalog-price">от 649 000 ₸</p>
+              <a class="button button-secondary product-link" data-product="iPhone 16 Pro" href="#" target="_blank" rel="noreferrer">Спросить цену</a>
+            </article>
+
+            <article class="catalog-card">
+              <div class="catalog-topline">
+                <span class="catalog-badge">Умный апгрейд</span>
+                <span>Популярный выбор</span>
+              </div>
+              <h3>iPhone 15</h3>
+              <p>Современный iPhone с комфортной стоимостью для тех, кто хочет новый опыт без перегруза по бюджету.</p>
+              <p class="catalog-price">от 429 000 ₸</p>
+              <a class="button button-secondary product-link" data-product="iPhone 15" href="#" target="_blank" rel="noreferrer">Спросить цену</a>
+            </article>
+
+            <article class="catalog-card">
+              <div class="catalog-topline">
+                <span class="catalog-badge">Проверенная классика</span>
+                <span>Вход в Apple</span>
+              </div>
+              <h3>iPhone 13</h3>
+              <p>Надёжная модель для тех, кто хочет оригинальный iPhone по более комфортной цене и без компромисса по ощущению качества.</p>
+              <p class="catalog-price">от 239 000 ₸</p>
+              <a class="button button-secondary product-link" data-product="iPhone 13" href="#" target="_blank" rel="noreferrer">Спросить цену</a>
+            </article>
+
+            <article class="catalog-card">
+              <div class="catalog-topline">
+                <span class="catalog-badge">Проверенные б/у</span>
+                <span>Наличие после трейд-ина</span>
+              </div>
+              <h3>Б/у iPhone</h3>
+              <p>Подобранные устройства для тех, кто хочет ещё выгоднее: аккуратно, прозрачно и с консультацией перед покупкой.</p>
+              <p class="catalog-price">по запросу</p>
+              <a class="button button-secondary product-link" data-product="Б/у iPhone" href="#" target="_blank" rel="noreferrer">Узнать варианты</a>
+            </article>
+
+            <article class="catalog-card">
+              <div class="catalog-topline">
+                <span class="catalog-badge">Аксессуары</span>
+                <span>Подарки и допы</span>
+              </div>
+              <h3>Аксессуары</h3>
+              <p>Чехлы, стёкла, адаптеры, наушники и всё, что помогает сразу забрать устройство полностью готовым к использованию.</p>
+              <p class="catalog-price">в наличии</p>
+              <a class="button button-secondary product-link" data-product="Аксессуары для iPhone" href="#" target="_blank" rel="noreferrer">Подобрать комплект</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section tradein-section" id="tradein">
+          <div class="section-heading">
+            <p class="eyebrow">Трейд-ин</p>
+            <h2>Рассчитайте примерную стоимость вашего iPhone.</h2>
+          </div>
+
+          <div class="tradein-store-note" id="tradein-store-note" hidden>
+            <div class="tradein-store-card">
+              <p class="tradein-label">Трейд-ин в магазине</p>
+              <h3 id="tradein-store-title">Трейд-ин для этого города оформляется только в магазине.</h3>
+              <p class="tradein-note" id="tradein-store-text">
+                Для клиентов из Уральска и Атырау трейд-ин доступен при личном посещении филиала. Подойдите в магазин, и консультанты помогут с оценкой устройства.
+              </p>
+            </div>
+          </div>
+
+          <div class="tradein-layout" id="tradein-layout">
+            <div class="tradein-card">
+              <div class="tradein-topbar">
+                <div>
+                  <p class="tradein-label">Оценка устройства</p>
+                  <h3>Укажите параметры вашего iPhone</h3>
+                </div>
+              </div>
+
+              <div class="tradein-grid">
+                <label>
+                  Модель iPhone
+                  <select id="tradein-model">
+                    <option>iPhone 11</option>
+                    <option>iPhone 11 Pro</option>
+                    <option>iPhone 11 Pro Max</option>
+                    <option>iPhone 12</option>
+                    <option>iPhone 12 Pro</option>
+                    <option>iPhone 12 Pro Max</option>
+                    <option>iPhone 13</option>
+                    <option>iPhone 13 Pro</option>
+                    <option>iPhone 13 Pro Max</option>
+                    <option>iPhone 14</option>
+                    <option>iPhone 14 Pro</option>
+                    <option>iPhone 14 Pro Max</option>
+                    <option>iPhone 15</option>
+                    <option>iPhone 15 Pro</option>
+                    <option>iPhone 15 Pro Max</option>
+                    <option>iPhone 16</option>
+                    <option>iPhone 16 Pro</option>
+                    <option>iPhone 16 Pro Max</option>
+                    <option>iPhone 17</option>
+                    <option>iPhone 17 Pro</option>
+                    <option>iPhone 17 Pro Max</option>
+                  </select>
+                </label>
+
+                <label>
+                  Память
+                  <select id="tradein-storage">
+                    <option>128 GB</option>
+                    <option>256 GB</option>
+                    <option>512 GB</option>
+                    <option>1 TB</option>
+                  </select>
+                </label>
+
+                <label>
+                  Внешнее состояние
+                  <select id="tradein-condition">
+                    <option value="Идеальное">Идеальное</option>
+                    <option value="Хорошее">Хорошее</option>
+                    <option value="Есть заметные следы">Есть заметные следы</option>
+                  </select>
+                </label>
+
+                <label class="range-field">
+                  Ёмкость батареи
+                  <div class="range-meta">
+                    <span>50%</span>
+                    <strong id="battery-value">89%</strong>
+                    <span>100%</span>
+                  </div>
+                  <input id="battery-health" type="range" min="50" max="100" value="89" />
+                </label>
+
+                <fieldset class="option-group">
+                  <legend>Есть сколы или трещины?</legend>
+                  <div class="toggle-row">
+                    <label class="toggle-pill">
+                      <input type="radio" name="damage" value="Нет" checked />
+                      <span>Нет</span>
+                    </label>
+                    <label class="toggle-pill">
+                      <input type="radio" name="damage" value="Да" />
+                      <span>Да</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="option-group">
+                  <legend>Батарея менялась?</legend>
+                  <div class="toggle-row">
+                    <label class="toggle-pill">
+                      <input type="radio" name="battery-replaced" value="Нет" checked />
+                      <span>Нет</span>
+                    </label>
+                    <label class="toggle-pill">
+                      <input type="radio" name="battery-replaced" value="Да" />
+                      <span>Да</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="option-group">
+                  <legend>Есть коробка?</legend>
+                  <div class="toggle-row">
+                    <label class="toggle-pill">
+                      <input type="radio" name="has-box" value="Да" />
+                      <span>Да</span>
+                    </label>
+                    <label class="toggle-pill">
+                      <input type="radio" name="has-box" value="Нет" checked />
+                      <span>Нет</span>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <fieldset class="option-group">
+                  <legend>Был ли в ремонте?</legend>
+                  <div class="toggle-row">
+                    <label class="toggle-pill">
+                      <input type="radio" name="was-repaired" value="Нет" checked />
+                      <span>Нет</span>
+                    </label>
+                    <label class="toggle-pill">
+                      <input type="radio" name="was-repaired" value="Да" />
+                      <span>Да</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <aside class="tradein-summary">
+              <p class="tradein-label">Предварительная оценка</p>
+              <strong id="tradein-price">365 000 ₸</strong>
+              <p class="tradein-note">
+                Сумма ориентировочная. Финальная оценка подтверждается после осмотра устройства в магазине.
+              </p>
+
+              <div class="tradein-breakdown">
+                <div>
+                  <span>Состояние</span>
+                  <strong id="summary-condition">Хорошее</strong>
+                </div>
+                <div>
+                  <span>Память</span>
+                  <strong id="summary-storage">128 GB</strong>
+                </div>
+                <div>
+                  <span>Батарея</span>
+                  <strong id="summary-battery">89%</strong>
+                </div>
+                <div>
+                  <span>Был в ремонте</span>
+                  <strong id="summary-repaired">Нет</strong>
+                </div>
+              </div>
+
+              <a class="button button-primary button-large" id="tradein-whatsapp" href="#" target="_blank" rel="noreferrer">
+                Отправить оценку в WhatsApp
+              </a>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section reviews-section" id="reviews">
+          <div class="section-heading">
+            <p class="eyebrow">Social proof</p>
+            <h2>Сайт опирается на реальные слова клиентов: сервис, цена, атмосфера и доверие к оригинальной технике.</h2>
+          </div>
+
+          <div class="reviews-grid">
+            <article class="review-card highlight">
+              <span class="review-badge">Тёплый отзыв</span>
+              <p class="review-quote">
+                "Самый лучший магазин в Уральске, сотрудники Төреш и Батырхан очень грамотно и быстро проконсультировали, покупкой довольна."
+              </p>
+              <div class="review-meta">
+                <strong>Подтверждённый отзыв</strong>
+                <span>31 марта 2026</span>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <span class="review-badge">Сервис</span>
+              <p class="review-quote">
+                "Купила новый телефон, спасибо консультантам, всё быстро установили. Обслужили быстро, всё подсказали, вежливые ребята."
+              </p>
+              <div class="review-meta">
+                <strong>Mira Nurzhanova</strong>
+                <span>27 февраля 2026</span>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <span class="review-badge">Выгодная цена</span>
+              <p class="review-quote">
+                "Покупаем третий телефон в этом магазине, сервис отличный, цена самая низкая по городу, всегда подарочки дают."
+              </p>
+              <div class="review-meta">
+                <strong>Zaure Kaliyeva</strong>
+                <span>13 января 2026</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section stores-section" id="stores">
+          <div class="section-heading">
+            <p class="eyebrow">Stores</p>
+            <h2>Три города. Один стандарт ощущения: красиво, быстро и надёжно.</h2>
+          </div>
+
+          <div class="stores-grid">
+            <article class="store-card" data-store-card="Уральск">
+              <p class="store-city">Уральск</p>
+              <h3>Abai 88, Oral, Kazakhstan</h3>
+              <p>Филиал с сильным локальным доверием, тёплыми отзывами и самым узнаваемым сервисным вайбом бренда.</p>
+              <div class="store-links">
+                <a href="https://go.2gis.com/mlqUp" target="_blank" rel="noreferrer">Открыть карту</a>
+                <a href="https://www.instagram.com/imarket.uralsk?igsh=MWd2dDJmcTZxeHB1Mg%3D%3D" target="_blank" rel="noreferrer">Instagram</a>
+              </div>
+            </article>
+
+            <article class="store-card" data-store-card="Атырау">
+              <p class="store-city">Атырау</p>
+              <h3>Кулманова 105 а</h3>
+              <p>Тот же luxury-сервис: подбор модели, консультация, перенос данных и комфортный маршрут покупки.</p>
+              <div class="store-links">
+                <a
+                  href="https://2gis.kz/atyrau/search/iMarket%2C%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%20%D0%B8%20%D0%B0%D0%BA%D1%81%D0%B5%D1%81%D1%81%D1%83%D0%B0%D1%80%D0%BE%D0%B2/firm/70000001098329895/51.902173%2C47.108669?m=51.902173%2C47.108669%2F17.63"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Открыть карту</a
+                >
+                <a href="https://www.instagram.com/imarket.atyrau?igsh=d284Mjc1cTl4cDV5" target="_blank" rel="noreferrer">Instagram</a>
+              </div>
+            </article>
+
+            <article class="store-card" data-store-card="Астана">
+              <p class="store-city">Астана</p>
+              <h3>Бұқар жырау 26</h3>
+              <p>Столичный филиал для тех, кто хочет тот же высокий уровень бренда, но ближе к своему району и ритму.</p>
+              <div class="store-links">
+                <a
+                  href="https://2gis.kz/astana/search/iMarket%2C%20%D0%BC%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%BE%D0%B2%20%D0%B8%20%D0%B0%D0%BA%D1%81%D0%B5%D1%81%D1%81%D1%83%D0%B0%D1%80%D0%BE%D0%B2/firm/70000001111683450/71.410301%2C51.101973?m=71.410301%2C51.101973%2F17.63"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Открыть карту</a
+                >
+                <a href="https://www.instagram.com/imarket_astana?igsh=dDNjMXFwdGZqY2lt" target="_blank" rel="noreferrer">Instagram</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section delivery-section" id="delivery">
+          <div class="contact-card">
+            <div class="contact-copy">
+              <p class="eyebrow" id="delivery-eyebrow">Доставка</p>
+              <h2 id="delivery-title">Доставка по всему Казахстану.</h2>
+              <p id="delivery-text">
+                Доставка доступна для клиентов из Уральска, Атырау и Астаны, а также по всему Казахстану.
+                Напишите нам в WhatsApp, чтобы уточнить сроки, наличие и оформить заказ.
+              </p>
+            </div>
+
+            <div class="contact-actions">
+              <a class="button button-primary button-large" id="delivery-whatsapp" href="#" target="_blank" rel="noreferrer">
+                Заказать через WhatsApp
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+          <div class="contact-card">
+            <div class="contact-copy">
+              <p class="eyebrow">Contact</p>
+              <h2>За более подробной информацией свяжитесь с нами в WhatsApp или Instagram.</h2>
+              <p>
+                Текущий филиал: <strong id="contact-city">Уральск</strong>. Мы уже подставили нужный
+                номер, Instagram и адрес, чтобы клиенту было максимально легко перейти к покупке.
+              </p>
+            </div>
+
+            <div class="contact-actions">
+              <a class="button button-primary button-large" id="contact-whatsapp" href="#" target="_blank" rel="noreferrer">Написать в WhatsApp</a>
+              <a class="button button-secondary button-large" id="contact-instagram" href="#" target="_blank" rel="noreferrer">Открыть Instagram</a>
+            </div>
+
+            <div class="contact-grid">
+              <article>
+                <span>Телефон</span>
+                <strong id="contact-phone">+7 771 845 0707</strong>
+              </article>
+              <article>
+                <span>Адрес</span>
+                <strong id="contact-address">Abai 88, Oral, Kazakhstan</strong>
+              </article>
+              <article>
+                <span>Карта</span>
+                <a id="contact-map" href="https://go.2gis.com/mlqUp" target="_blank" rel="noreferrer">Открыть в 2GIS</a>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <img class="footer-logo" src="logo-imarket.svg" alt="iMarket" />
+          <p>Премиальный магазин iPhone и аксессуаров с филиалами в Уральске, Атырау и Астане.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#catalog">Каталог</a>
+          <a href="#tradein">Трейд-ин</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#stores">Филиалы</a>
+          <a href="#delivery">Доставка</a>
+          <a href="#contact">Контакты</a>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> iMarket. Premium Apple retail experience in Kazakhstan.</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
